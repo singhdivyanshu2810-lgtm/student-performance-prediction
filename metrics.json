@@ -1,0 +1,48 @@
+{
+  "best_model": "Random Forest",
+  "n_rows": 500,
+  "n_train": 400,
+  "n_test": 100,
+  "table": [
+    {
+      "Model": "Logistic Regression",
+      "Accuracy": 0.84,
+      "Precision": 0.855072463768116,
+      "Recall": 0.9076923076923077,
+      "F1": 0.8805970149253731,
+      "CV Accuracy (5-fold)": 0.8800000000000001
+    },
+    {
+      "Model": "Decision Tree",
+      "Accuracy": 0.83,
+      "Precision": 0.8428571428571429,
+      "Recall": 0.9076923076923077,
+      "F1": 0.8740740740740741,
+      "CV Accuracy (5-fold)": 0.8225
+    },
+    {
+      "Model": "Random Forest",
+      "Accuracy": 0.86,
+      "Precision": 0.8591549295774648,
+      "Recall": 0.9384615384615385,
+      "F1": 0.8970588235294118,
+      "CV Accuracy (5-fold)": 0.8475000000000001
+    }
+  ],
+  "confusion_matrix": [
+    [
+      25,
+      10
+    ],
+    [
+      4,
+      61
+    ]
+  ],
+  "feature_importance": {
+    "attendance": 0.10712438389285464,
+    "assignment_marks": 0.2150131351728943,
+    "previous_marks": 0.33800047094728203,
+    "study_hours": 0.339862009986969
+  }
+}
