@@ -118,9 +118,13 @@ with tab_perf:
     st.dataframe(table.style.format("{:.3f}"), width="stretch")
     a, b = st.columns(2)
     with a:
-        st.image("images/confusion_matrix.png")
+        st.write("**Confusion matrix (test data)**")
+        cm = pd.DataFrame(metrics["confusion_matrix"], index=["Actual Fail", "Actual Pass"],
+                          columns=["Predicted Fail", "Predicted Pass"])
+        st.dataframe(cm)
     with b:
-        st.image("images/feature_importance.png")
+        st.write("**Feature importance**")
+        st.bar_chart(pd.Series(metrics["feature_importance"]))
 
 with tab_data:
     st.subheader("Training Data")
